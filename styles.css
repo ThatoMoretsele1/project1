@@ -136,6 +136,11 @@ h1{
     padding: 20px;
 }
 
+/* Give the navbar bottom spacing on the WBS page */
+.wbs-page .navbar {
+    margin-bottom: 20px;
+}
+
 /* Page headings */
 .wbs-title {
     color: #ffffff;
