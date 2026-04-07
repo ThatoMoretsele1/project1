@@ -1,25 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work Breakdown Structure</title>
-</head>
-<body>
-    <nav>
-        <!-- Existing site navbar here -->
-        <a href="wbs-pyramid.html">Work Breakdown Structure</a>
-    </nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Work Breakdown Structure – Production Planning Optimisation System</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body class="wbs-page">
+        <nav class="navbar">
+            <div class="nav-left">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+            </div>
+            <div class="nav-center">
+                <a href="services.html">Services</a>
+                <a href="wbs.html">Work Breakdown Structure (Tree)</a>
+                <a href="wbs-pyramid.html">Work Breakdown Structure (Pyramid)</a>
+            </div>
+            <div class="nav-right">
+                <a href="contact.html">Contact</a>
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+            </div>
+        </nav>
 
-    <h1>Work Breakdown Structure</h1>
-    <div style="text-align: center;">
-        <div style="display: inline-block;">
-            <h2>Production Planning Optimisation System</h2>
-            <h3>Project Initiation and Design</h3>
-            <h4>Operations Research</h4>
-            <h5>Microsoft Excel Solver</h5>
-            <p>Linear Programming</p>
-        </div>
-    </div>
-</body>
+        <h1 class="wbs-title">Work Breakdown Structure</h1>
+        <h2 class="wbs-subtitle">1.0 Production Planning Optimisation System</h2>
+
+        <main class="wbs-pyramid" aria-label="Work Breakdown Structure pyramid diagram">
+
+            <!-- LEVEL 0 -->
+            <section class="wbs-row">
+                <div class="wbs-card wbs-card-root">
+                    <div class="wbs-card-code">1.0</div>
+                    <div class="wbs-card-text">Production Planning Optimisation System</div>
+                </div>
+            </section>
+
+            <div class="wbs-connectors">
+                <div class="wbs-line-vertical"></div>
+                <div class="wbs-line-horizontal wbs-line-horizontal-three"></div>
+            </div>
+
+            <!-- LEVEL 1 -->
+            <section class="wbs-row wbs-row-three">
+                <div class="wbs-card wbs-card-level1">
+                    <div class="wbs-card-code">1.1</div>
+                    <div class="wbs-card-text">Project Initiation and Design</div>
+                </div>
+
+                <div class="wbs-card wbs-card-level1">
+                    <div class="wbs-card-code">1.2</div>
+                    <div class="wbs-card-text">Implementation and Analysis</div>
+                </div>
+
+                <div class="wbs-card wbs-card-level1">
+                    <div class="wbs-card-code">1.3</div>
+                    <div class="wbs-card-text">Supporting Components (Across Both Phases)</div>
+                </div>
+            </section>
+
+            <div class="wbs-connectors">
+                <div class="wbs-line-vertical"></div>
+                <div class="wbs-line-horizontal wbs-line-horizontal-three"></div>
+            </div>
+
+            <!-- LEVEL 2 -->
+            <section class="wbs-row wbs-row-three wbs-row-top">
+                <!-- 1.1 children -->
+                <div class="wbs-column">
+                    <div class="wbs-stack">
+                        <div class="wbs-card wbs-card-level2">
+                            <div class="wbs-card-code">1.1.1</div>
+                            <div class="wbs-card-text">Project Topic and Scope</div>
+                        </div>
+
+                        <div class="wbs-card wbs-card-level2">
+                            <div class="wbs-card-code">1.1.2</div>
+                            <div class="wbs-card-text">Project Proposal</div>
+                        </div>
+
+                        <div class="wbs-card wbs-card-level2">
+                            <div class="wbs-card-code">1.1.3</div>
+                            <div class="wbs-card-text">Preliminary Project Report</div>
+                        </div>
+
+                        <div class="wbs-card wbs-card-level2">
+                            <div class="wbs-card-code">1.1.4</div>
+                            <div class="wbs-card-text">Reflection on Learning Video</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1.2 children -->
+                <div class="wbs-column">
+                    <div class="wbs-stack">
+                        <div class="wbs-card wbs-card-level2">
+                            <div class="wbs-card-code">1.2.1</div>
+                            <div class="wbs-card-text">Interim Project Report</div>
+                        </div>
+
+                        <div class="wbs-card wbs-card-level2">
+                            <div class="wbs-card-code">1.2.2</div>
+                            <div class="wbs-card-text">Oral Presentation</div>
+                        </div>
+
+                        <div class="wbs-card wbs-card-level2">
+                            <div class="wbs-card-code">1.2.3</div>
+                            <div class="wbs-card-text">Final Project Report</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 1.3 children -->
+                <div class="wbs-column">
+                    <div class="wbs-stack">
+                        <div class="wbs-card wbs-card-level2">
+                            <div class="wbs-card-code">1.3.1</div>
+                            <div class="wbs-card-text">Techniques</div>
+                        </div>
+
+                        <div class="wbs-card wbs-card-level2">
+                            <div class="wbs-card-code">1.3.2</div>
+                            <div class="wbs-card-text">Software Tools</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Word and PowerPoint style details -->
+            <section class="wbs-details" aria-label="Work Breakdown Structure details">
+                <div class="wbs-panel">
+                    <h3>1.1.1 Project Topic and Scope</h3>
+                    <ul>
+                        <li>Define problem (production planning inefficiencies)</li>
+                        <li>Define objectives (optimisation, decision support)</li>
+                        <li>Define system boundaries</li>
+                    </ul>
+                </div>
+
+                <div class="wbs-panel">
+                    <h3>1.1.2 Project Proposal</h3>
+                    <ul>
+                        <li>Literature review (Operations Research and production planning)</li>
+                        <li>Select techniques (Linear Programming and optimisation)</li>
+                        <li>Define methodology</li>
+                    </ul>
+                </div>
+
+                <div class="wbs-panel">
+                    <h3>1.1.3 Preliminary Project Report</h3>
+                    <ul>
+                        <li>Current production workflow analysis</li>
+                        <li>Visual workflow representation (process map)</li>
+                        <li>Data preparation: Processing times; Changeover requirements; Plywood specifications</li>
+                        <li>Initial model development: Decision variables; Constraints; Objective function</li>
+                    </ul>
+                </div>
+
+                <div class="wbs-panel">
+                    <h3>1.1.4 Reflection on Learning Video</h3>
+                    <ul>
+                        <li>Challenges faced</li>
+                        <li>Skills developed</li>
+                        <li>Learning insights</li>
+                    </ul>
+                </div>
+
+                <div class="wbs-panel">
+                    <h3>1.2.1 Interim Project Report</h3>
+                    <ul>
+                        <li>Developed Operations Research model: Decision support system for production planning</li>
+                        <li>Model implementation: Software tool (Python, Microsoft Excel, or AnyLogic)</li>
+                        <li>Demonstration results: Scenario analysis; Planning decision simulations</li>
+                    </ul>
+                </div>
+
+                <div class="wbs-panel">
+                    <h3>1.2.2 Oral Presentation</h3>
+                    <ul>
+                        <li>Problem overview</li>
+                        <li>Model explanation</li>
+                        <li>Results and insights</li>
+                        <li>Recommendations</li>
+                    </ul>
+                </div>
+
+                <div class="wbs-panel">
+                    <h3>1.2.3 Final Project Report</h3>
+                    <ul>
+                        <li>Complete model documentation</li>
+                        <li>Results analysis</li>
+                        <li>Evaluation of solution: Effectiveness of optimisation; Practical applicability; Limitations</li>
+                        <li>Final recommendations: Improvements for plywood production planning</li>
+                    </ul>
+                </div>
+
+                <div class="wbs-panel">
+                    <h3>1.3.1 Techniques</h3>
+                    <ul>
+                        <li>Linear Programming</li>
+                        <li>Operations Research modelling</li>
+                        <li>Process mapping</li>
+                    </ul>
+                </div>
+
+                <div class="wbs-panel">
+                    <h3>1.3.2 Software Tools</h3>
+                    <ul>
+                        <li>AnyLogic (simulation tools)</li>
+                        <li>Microsoft Excel Solver and Python</li>
+                        <li>Data analysis tools</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+    </body>
 </html>
