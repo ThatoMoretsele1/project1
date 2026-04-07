@@ -1,10 +1,159 @@
+/* =========================================================
+   Work Breakdown Structure Pyramid Styles (matches wbs-pyramid.html)
+   ========================================================= */
+
 .wbs-pyramid {
-  display: flex;
-  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.wbs-pyramid .task {
-  padding: 10px;
-  margin: 5px;
-  border: 1px solid #ccc;
+/* Rows */
+.wbs-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 18px;
+  margin: 14px 0;
+}
+
+.wbs-row-three {
+  justify-content: space-between;
+}
+
+.wbs-row-top {
+  align-items: flex-start;
+}
+
+.wbs-column {
+  flex: 1;
+  min-width: 0;
+}
+
+.wbs-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Cards (PowerPoint style) */
+.wbs-card {
+  background: #ffffff;
+  color: #0b2c36;
+  border: 2px solid #a8d8ea;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.28);
+  padding: 12px 14px;
+
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.wbs-card-code {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #0d3b4f;
+  background: #e8f7fd;
+  border: 1px solid #7ec8e3;
+  border-radius: 10px;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.wbs-card-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+/* Level colouring */
+.wbs-card-root {
+  background: linear-gradient(180deg, #0d3b4f, #0a2f3f);
+  color: #ffffff;
+  border-color: #c5e8f5;
+}
+
+.wbs-card-root .wbs-card-code {
+  background: #ffffff;
+}
+
+.wbs-card-level1 {
+  background: linear-gradient(180deg, #145c7a, #0f4d66);
+  color: #ffffff;
+}
+
+.wbs-card-level1 .wbs-card-code {
+  background: #ffffff;
+}
+
+.wbs-card-level2 {
+  background: #f3fbff;
+}
+
+/* Connector lines */
+.wbs-connectors {
+  position: relative;
+  height: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wbs-line-vertical {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 28px;
+  width: 0;
+  border-left: 3px solid #a8d8ea;
+  transform: translateX(-50%);
+}
+
+.wbs-line-horizontal {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 22px;
+  height: 0;
+  border-top: 3px solid #a8d8ea;
+}
+
+/* Details panels */
+.wbs-details {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.wbs-panel {
+  background: rgba(255,255,255,0.95);
+  border: 1px solid #7ec8e3;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.wbs-panel h3 {
+  margin: 0 0 10px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #0d3b4f;
+}
+
+.wbs-panel ul {
+  margin: 0;
+  padding-left: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0b2c36;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .wbs-row-three {
+    flex-direction: column;
+  }
+  .wbs-line-horizontal {
+    display: none;
+  }
 }
