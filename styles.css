@@ -130,6 +130,27 @@ h1{
    WBS DIAGRAM  (wbs.html)
    ========================================================= */
 
+/* Page body */
+.wbs-page {
+    background-color: rgb(24, 57, 66);
+    padding: 20px;
+}
+
+/* Page headings */
+.wbs-title {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wbs-subtitle {
+    color: #a8d8ea;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Wrapper – horizontal scroll on small screens */
 .wbs-tree {
     overflow-x: auto;
