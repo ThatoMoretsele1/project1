@@ -125,3 +125,111 @@ h1{
     justify-content: center;
     align-items: baseline;
 }
+
+/* =========================================================
+   WBS DIAGRAM  (wbs.html)
+   ========================================================= */
+
+/* Wrapper – horizontal scroll on small screens */
+.wbs-tree {
+    overflow-x: auto;
+    padding: 10px 0 30px;
+}
+
+/* Reset list defaults */
+.wbs-tree ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---- TREE LINES ---- */
+/* Vertical line down the left side of each <ul> */
+.wbs-tree ul ul {
+    padding-left: 40px;
+    position: relative;
+}
+
+/* Vertical connector */
+.wbs-tree ul ul::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    border-left: 2px solid #a8d8ea;
+}
+
+/* Horizontal connector to each node */
+.wbs-tree ul ul > li {
+    position: relative;
+    padding: 6px 0 6px 20px;
+}
+
+.wbs-tree ul ul > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 22px;
+    width: 20px;
+    border-top: 2px solid #a8d8ea;
+}
+
+/* Remove connector line after the last child */
+.wbs-tree ul ul > li:last-child::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 22px;
+    bottom: 0;
+    width: 2px;
+    background-color: rgb(24, 57, 66); /* match page background */
+}
+
+/* ---- NODE BOX ---- */
+.wbs-node {
+    display: inline-block;
+    border-radius: 6px;
+    padding: 7px 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    max-width: 360px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.35);
+    cursor: default;
+}
+
+/* Level colours */
+.wbs-root {
+    background-color: #0d3b4f;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid #a8d8ea;
+}
+
+.wbs-lvl1 {
+    background-color: #145c7a;
+    color: #ffffff;
+    font-weight: bold;
+    border: 2px solid #7ec8e3;
+}
+
+.wbs-lvl2 {
+    background-color: #1e7a9e;
+    color: #ffffff;
+    border: 1px solid #a8d8ea;
+}
+
+.wbs-lvl3 {
+    background-color: #2496bf;
+    color: #ffffff;
+    border: 1px solid #c5e8f5;
+}
+
+.wbs-leaf {
+    background-color: #e8f7fd;
+    color: #0d3b4f;
+    border: 1px solid #7ec8e3;
+    font-size: 12px;
+}
